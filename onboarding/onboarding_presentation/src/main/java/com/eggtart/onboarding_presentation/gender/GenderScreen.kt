@@ -1,4 +1,4 @@
-package com.plcoding.onboarding_presentation.gender
+package com.eggtart.onboarding_presentation.gender
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.MaterialTheme
@@ -17,7 +17,6 @@ import com.eggtart.core_ui.LocalSpacing
 import com.eggtart.onboarding_presentation.R
 import com.eggtart.onboarding_presentation.components.ActionButton
 import com.eggtart.onboarding_presentation.components.SelectableButton
-import com.eggtart.onboarding_presentation.gender.GenderViewModel
 import kotlinx.coroutines.flow.collect
 
 @Composable
