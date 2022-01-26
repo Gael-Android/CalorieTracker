@@ -11,12 +11,15 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.eggtart.core.navigation.Route
+import com.eggtart.onboarding_presentation.activity.ActivityScreen
 import com.eggtart.onboarding_presentation.age.AgeScreen
 import com.eggtart.onboarding_presentation.welcome.WelcomeScreen
 import com.plcoding.calorytracker.navigation.navigate
 import com.plcoding.calorytracker.ui.theme.CaloryTrackerTheme
 import com.eggtart.onboarding_presentation.gender.GenderScreen
+import com.eggtart.onboarding_presentation.goal.GoalScreen
 import com.eggtart.onboarding_presentation.height.HeightScreen
+import com.eggtart.onboarding_presentation.nutrient_goal.NutrientGoalScreen
 import com.eggtart.onboarding_presentation.weight.WeightScreen
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -61,13 +64,16 @@ class MainActivity : ComponentActivity() {
                             )
                         }
                         composable(Route.NUTRIENT_GOAL) {
-
+                            NutrientGoalScreen(
+                                scaffoldState = scaffoldState,
+                                onNavigate = navController::navigate
+                            )
                         }
                         composable(Route.ACTIVITY) {
-
+                            ActivityScreen(onNavigate = navController::navigate)
                         }
                         composable(Route.GOAL) {
-
+                            GoalScreen(onNavigate = navController::navigate)
                         }
                         composable(Route.TRACKER_OVERVIEW) {
 
